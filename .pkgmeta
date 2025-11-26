@@ -1,0 +1,8 @@
+package-as: DontRelease
+
+move-folders:
+ DontRelease/Source: DontRelease
+
+ignore:
+ - LICENCE.md
+ - README.md
