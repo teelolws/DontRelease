@@ -1,4 +1,4 @@
-## Interface: 110205
+## Interface: 110207
 ## Title: Don't Release
 ## Notes: Reminds you not to Release Spirit in raids... by moving the entire Dialog Box away when you try to click it
 ## Version: @project-version@
