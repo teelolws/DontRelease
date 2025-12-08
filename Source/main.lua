@@ -1,7 +1,5 @@
 local addonName, addon = ...
 
-local L = LibStub("AceLocale-3.0"):GetLocale(addonName)
-
 local firstEnterTime
 local numMoves = 0
 
@@ -49,7 +47,6 @@ for i = 1, 4 do
             local point, relativeTo, relativePoint, offsetX, offsetY = self:GetPoint()
             
             if point == "TOP" then
-                local left, right, up, down
                 local x = (screenWidth/2) - (width/2) + offsetX
                 local y = screenHeight + offsetY
                 

@@ -55,8 +55,8 @@ local options = {
                 battleground = BATTLEGROUND,
                 arena = ARENA,
             },
-            get = function(info, keyName) return addon.db.profile.enableSituations[keyName] end,
-            set = function(info, keyName, state) addon.db.profile.enableSituations[keyName] = state end,
+            get = function(_, keyName) return addon.db.profile.enableSituations[keyName] end,
+            set = function(_, keyName, state) addon.db.profile.enableSituations[keyName] = state end,
         },
     },
 }
