@@ -78,17 +78,16 @@ for i = 1, 4 do
             if numMoves > addon.db.profile.moveLimit then return end
 
             local width, height = self:GetSize()
+            local halfHeight, halfWidth = height/2, width/2
             local screenWidth, screenHeight = UIParent:GetSize()
             local point, relativeTo, relativePoint, offsetX, offsetY = self:GetPoint()
             local lockoutLeft, lockoutRight, lockoutUp, lockoutDown
             
             if point ~= "TOP" then return end
             
-            local x = (screenWidth/2) - (width/2) + offsetX
+            local x = (screenWidth/2) - halfWidth + offsetX
             local y = screenHeight + offsetY
             
-            local num = 0
-            local f = {}
             if x - width < 0 then
                 lockoutLeft = true
             end
@@ -104,9 +103,6 @@ for i = 1, 4 do
             
             local rand = math.random(1, 2)
             local direction -- left: 1, right: 2, up: 3, down: 4
-
-        
-            local halfHeight, halfWidth = height/2, width/2
             
             -- is cursor in top left quadrant?
             if self:IsMouseOver(nil, halfHeight, nil, -1*halfWidth) then
@@ -201,7 +197,6 @@ for i = 1, 4 do
             else
                 return
             end
-            
             
             self:SetPoint(point, relativeTo, relativePoint, offsetX, offsetY)
         end
