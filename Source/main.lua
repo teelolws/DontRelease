@@ -50,7 +50,7 @@ for i = 1, 4 do
             
             if C_PvP.IsArena() then
                 if not enableSituations.arena then return end
-            elseif C_PvP.IsBattleground() then
+            elseif C_PvP.IsBattleground() or C_PvP.IsSoloRBG() then
                 if not enableSituations.battleground then return end
             else
                 if IsInRaid() then
