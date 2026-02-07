@@ -50,7 +50,8 @@ for i = 1, 4 do
             
             if C_PvP.IsArena() then
                 if not enableSituations.arena then return end
-            elseif C_PvP.IsBattleground() or C_PvP.IsSoloRBG() then
+            elseif C_PvP.IsPVPMap() then
+                -- Note: C_PvP.IsPVPMap() appears to catch all instanced PvP, where C_PvP.IsBattleground() ignores Training Grounds. We've already tested for arenas separately.
                 if not enableSituations.battleground then return end
             else
                 if IsInRaid() then
